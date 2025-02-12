@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int a[4],x,y,z,c1=1,c2=1,c3=1,mx=0;
+        for(int i=0;i<4;i++)
+        {
+            cin>>a[i];
+        }
+
+
+            x=a[0]+a[1];
+            if(x==a[3]-a[2])
+            {
+                c1++;
+            }
+            if(x==a[2]-a[1])
+            {
+                c1++;
+            }
+            x=a[3]-a[2];
+            if(x==a[0]+a[1])
+            {
+                c2++;
+            }
+            if(x==a[2]-a[1])
+            {
+                c2++;
+            }
+            x=a[2]-a[1];
+            if(x==a[0]+a[1])
+            {
+                c3++;
+            }
+            if(x==a[3]-a[2])
+            {
+                c3++;
+            }
+            mx=max(c1,c2);
+            cout<<max(mx,c3)<<endl;
+
+        }
+
+    }
+
