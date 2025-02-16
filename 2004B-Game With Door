@@ -1,0 +1,71 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+     int a, b, c, d,ans=0;
+	cin >> a >> b >> c >> d;
+            if(a > d || c > b)
+            {
+                cout<<1<<endl;
+                }
+	else if(a == d || b == c)
+    {
+        cout<<2<<endl;
+        }
+	else if(a > c) {
+		if(d < b)
+        {
+            ans = d - a + 1 + 1;
+            cout<<ans<<endl;
+            }
+		else if(d == b)
+        {
+            ans = b - a + 1 + 0;
+             cout<<ans<<endl;
+        }
+		else if(d > b)
+        {
+             ans = b - a + 1 + 1;
+             cout<<ans<<endl;
+        }
+	} else if(a == c) {
+		if(d < b)
+        {
+            ans = d - a + 0 + 1;
+             cout<<ans<<endl;
+        }
+		else if(d == b)
+        {
+            ans = b - a + 0 + 0;
+            cout<<ans<<endl;
+        }
+		else if(d > b)
+        {
+             ans = b - a + 0 + 1;
+             cout<<ans<<endl;
+        }
+	} else if(a < c) {
+		if(d < b)
+        {
+            ans = d - c + 1 + 1;
+            cout<<ans<<endl;
+        }
+		else if(d == b)
+        {
+            ans = d - c + 1 + 0;
+            cout<<ans<<endl;
+        }
+		else if(d > b)
+        {
+            ans =  b - c + 1 + 1;
+            cout<<ans<<endl;
+        }
+
+
+	}
+    }
+}
