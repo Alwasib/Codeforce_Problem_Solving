@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    int t;
+    cin>>t;
+    while(t--)
+    {
+       int n,sum=0,c=0,p;
+       cin>>n;
+       int a[n];
+       for(int i=0;i<n;i++)
+       {
+           cin>>a[i];
+       }
+        for(int i=0;i<n;i++)
+       {
+          if(a[i]%2==0)
+          {
+              c++;
+          }
+          if(a[i]%2==1)
+          {
+              sum++;
+          }
+       }
+       if(c==n)
+       {
+           cout<<1<<endl;
+       }
+       else if(sum==n)
+       {
+           cout<<n-1<<endl;
+       }
+       else{
+        cout<<1+sum<<endl;
+       }
+
+    }
+}
